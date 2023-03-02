@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,16 @@
     <title> Confirmation de commande</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="left">
             <div class="row1">
                 <div class="produit col1">
                     <img src="./Image/Sac1.png" alt="">
                 </div>
-    
+
                 <div class="produit col2">
                     <img src="./Image/Sac2.png" alt="">
                 </div>
@@ -25,7 +27,7 @@
                 <div class="produit col1">
                     <img src="./Image/Sac3.png" alt="">
                 </div>
-    
+
                 <div class="produit col2">
                     <img src="./Image/Sac4.png" alt="">
                 </div>
@@ -34,10 +36,13 @@
 
         <div class="right">
             <div class="right-top">
-                <span class="toptext" ><p class="home">Home / </p> Morbi vitae mi</span>
+                <span class="toptext">
+                    <p class="home">Home / </p> Morbi vitae mi
+                </span>
                 <div class="right-left-top">
-                    <img class="menuicon1" src="./Image/keyboard-buttons-or-visualization-button-of-nine-squares.png" alt="">
-                <img class="menuicon2" src="./Image/next.png" alt="">
+                    <img class="menuicon1" src="./Image/keyboard-buttons-or-visualization-button-of-nine-squares.png"
+                        alt="">
+                    <img class="menuicon2" src="./Image/next.png" alt="">
                 </div>
             </div>
 
@@ -48,11 +53,11 @@
                     </div>
                     <div class="review">
                         <div class="stars">
-                           <img class="star" src="./Image/star.png" alt="">
-                           <img class="star" src="./Image/star.png" alt="">
-                           <img class="star" src="./Image/star.png" alt="">
-                           <img class="star" src="./Image/star.png" alt="">
-                           <img class="star" src="./Image/star.png" alt="">
+                            <img class="star" src="./Image/star.png" alt="">
+                            <img class="star" src="./Image/star.png" alt="">
+                            <img class="star" src="./Image/star.png" alt="">
+                            <img class="star" src="./Image/star.png" alt="">
+                            <img class="star" src="./Image/star.png" alt="">
                         </div>
 
                         <div class="review_text">
@@ -66,8 +71,117 @@
                 </div>
             </div>
 
+            <div class="money">
+                <h4 class="price">
+                    $39.92 <span class="discount">$49.99</span>
+                </h4>
+            </div>
+
+            <div class="desc">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi, quibusdam itaque, porro ipsum
+                    fuga incidunt praesentium corporis quidem ducimus eaque minima nostrum! Totam, aperiam.</p>
+            </div>
+
+            <div class="color_panel">
+                <div class="colortext">
+                    <p id="color">Color:</p>
+                </div>
+
+                <div class="choose_col">
+                    <ul>
+                        <li class="color-item" id="white"></li>
+                        <li class="color-item" id="black"></li>
+                        <li class="color-item" id="green"></li>
+                        <li class="color-item" id="yellow"></li>
+                        <li class="color-item" id="red"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="stock">
+                <div class="textstock">
+                    <p>In stock 539 items</p>
+                </div>
+
+                <div class="click">
+                    <div class="button">
+                        <span class="minus">-</span>
+                        <span class="num">01</span>
+                        <span class="plus">+</span>
+                    </div>
+
+                    <div class="addtocart">
+                        <button>ADD TO CART</button>
+                    </div>
+
+                    <div class="buynow">
+                        <button>BUY NOW</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="morefonc">
+                <div class="comp">
+                    <div class="compimg">
+                        <img class="fonc" src="./Image/shuffle.png" alt="">
+                    </div>
+                    <div class="comptext">
+                        <p>Compare</p>
+                    </div>
+                </div>
+
+                <div class="wish">
+                    <div class="wishimg">
+                        <img class="fonc" src="./Image/heart.png" alt="">
+                    </div>
+                    <div class="wishtext">
+                        <p>Add to Wishlist</p>
+                    </div>
+                </div>
+
+                <div class="size">
+                    <div class="size">
+                        <img class="fonc" src="./Image/ruler.png" alt="">
+                    </div>
+                    <div class="sizetext">
+                        <p>Size Guide</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref">
+                <span id="ref">
+                    <p>SKU: </p> <span>PD0001</span>
+                </span>
+            </div>
+
+            <div class="social">
+                <p>Share: </p>
+                <img class="fonc" src="./Image/facebook.png" alt="" srcset="">
+                <img class="fonc" src="./Image/twitter.png" alt="" srcset="">
+                <img class="fonc" src="./Image/pinterest.png" alt="" srcset="">
+                <img class="fonc" src="./Image/linkedin.png" alt="" srcset="">
+                <img class="fonc" src="./Image/telegram.png" alt="" srcset="">
+            </div>
+
         </div>
     </div>
+    <script>
+        const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".num")
+
+        let a = 1;
+
+        plus.addEventListener("click", () => {
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+            console.log(a)
+        })
+    </script>
 
 </body>
+
 </html>
